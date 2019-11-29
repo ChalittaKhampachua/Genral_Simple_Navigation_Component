@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/baseFragment"
+        android:title="Base Fragment"
+        android:icon="@drawable/ic_base"/>
+
+    <item
+        android:id="@+id/oneFragment"
+        android:title="One Fragment"
+        android:icon="@drawable/ic_looks_one"/>
+
+    <item
+        android:id="@+id/twoFragment"
+        android:title="Two Fragment"
+        android:icon="@drawable/ic_looks_two"/>
+</menu>

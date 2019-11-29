@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/baseFragment"
+        android:name="com.mcodeapps.navigation.BaseFragment"
+        android:label="fragment_base"
+        tools:layout="@layout/fragment_base" >
+        <action
+            android:id="@+id/act_one"
+            app:destination="@id/oneFragment" />
+        <action
+            android:id="@+id/act_two"
+            app:destination="@id/twoFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/oneFragment"
+        android:name="com.mcodeapps.navigation.OneFragment"
+        android:label="fragment_one"
+        tools:layout="@layout/fragment_one" >
+        <argument
+            android:name="titleName"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="One Fragment" />
+        <deepLink
+            android:id="@+id/deepLink"
+            app:uri="http://www.example.com/" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/twoFragment"
+        android:name="com.mcodeapps.navigation.TwoFragment"
+        android:label="fragment_two"
+        tools:layout="@layout/fragment_two" />
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.mcodeapps.navigation.MainActivity"
+        android:label="MainActivity" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.mcodeapps.navigation.homeFragment"
+        android:label="home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.mcodeapps.navigation.DashboardFragment"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.mcodeapps.navigation.settingFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" />
+</navigation>
